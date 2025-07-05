@@ -1,0 +1,249 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Abyssinica SIL', serif;
+}
+
+/* Navbar */
+#navbar {
+  background-color: #000;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#navbar .nav-link {
+  color: white;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+#navbar .nav-link:hover,
+#navbar .nav-link.active {
+  color: #00ffff;
+}
+
+#logo {
+  font-size: 24px;
+  color: #00ffff;
+  font-weight: bold;
+}
+
+#btncv {
+  background-color: #00ffff;
+  border: none;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 60px 10%;
+}
+
+.home .content h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.home .content h5 {
+  font-size: 20px;
+  color: #00ffff;
+}
+
+.home .content span {
+  color: #00ffff;
+}
+
+#btn1 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00ffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.home .img img {
+  max-width: 350px;
+}
+
+/* About Section */
+#about {
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+}
+
+#about h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#about h5 {
+  color: #555;
+}
+
+#about h2 span {
+  color: #00cccc;
+}
+
+#btncv2 {
+  background: #00cccc;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Services */
+#services {
+  padding: 60px 10%;
+  background-color: #fff;
+  text-align: center;
+}
+
+#services h3 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#services .card {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: #f8f8f8;
+}
+
+#services .card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+#services .card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Resume */
+#resume {
+  padding: 60px 10%;
+  background-color: #f0f8ff;
+}
+
+#resume h1, #resume h5 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#resume .hr {
+  border-bottom: 2px solid #00cccc;
+  width: 60%;
+  margin: 20px auto;
+}
+
+/* Portfolio */
+#portfolio {
+  padding: 60px 10%;
+  background-color: #fff;
+}
+
+#portfolio .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+#portfolio .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Contact */
+#contact {
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#btncontact {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #00cccc;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Footer */
+#footer {
+  background-color: #111;
+  color: #ddd;
+  padding: 40px 0;
+}
+
+#footer h1 {
+  color: #00cccc;
+}
+
+#footer a {
+  color: #00cccc;
+  text-decoration: none;
+}
+
+#footer .icons i {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* Back to top arrow */
+.arrow {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #00cccc;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home .img img {
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  #services .card,
+  #portfolio .card {
+    margin-bottom: 20px;
+  }
+}
