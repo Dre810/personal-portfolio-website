@@ -17,22 +17,22 @@ const erasingSpeed = 50; // erasing speed in ms
 const delayBetweenPhrases = 1500;
 
 function type() {
-  const changecontent = document.querySelector(".changecontent");
-  if (!changecontent) return; // grabs the element where text changes if element is not found exit function
+  const changecontent = document.querySelector(".changecontent"); // grabs the element where text changes
+  if (!changecontent) return; // if element is not found exit function
 
-  if (!isDeleting && j <= phrases[i].length) {
-    currentPhrase.push(phrases[i][j]);
-    changecontent.textContent = currentPhrase.join("");
+  if (!isDeleting && j <= phrases[i].length) {  // if we're not deleting and haven't finished the phrase
+    currentPhrase.push(phrases[i][j]);  
+    changecontent.textContent = currentPhrase.join(""); // updates displayed text with current characters
     j++;
-    setTimeout(type, typingSpeed);
-    // if we're not deleting and havent finished the phrase add next character update the text and call type again after a delay
+    setTimeout(type, typingSpeed); // call type again after a delay to creaye a typing animation
+    
 
-  } else if (isDeleting && j >= 0) {
-    currentPhrase.pop();
-    changecontent.textContent = currentPhrase.join("");
+  } else if (isDeleting && j >= 0) { // checks if we're currently deleting and there are characters left to delete
+    currentPhrase.pop(); // removes the last character from current phrase
+    changecontent.textContent = currentPhrase.join(""); // updates displayed text to show the shortened phrase
     j--;
-    setTimeout(type, erasingSpeed);
-    // if we're deleting remove the last character,update text and continue until all characters are deleted
+    setTimeout(type, erasingSpeed); // call type again after a delay to create a deleting animation
+    
 
   } else {
     if (!isDeleting) {
@@ -46,7 +46,8 @@ function type() {
     }
   }
 }
-// once a phrase is typed  wait 1.5 seconds then start deleting once deleted move to the next phrase reset index and start typing again
+// if weve just finished typing a phrase we set isDeleting to true and wait before starting to delete
+// if we've finished deleting we move to the next phrase and start typing again
 
 document.addEventListener("DOMContentLoaded", () => { //ensures js runs after the full html is loaded
   type(); // starts typing animation soon as the page loads
